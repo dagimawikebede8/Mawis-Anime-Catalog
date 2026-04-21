@@ -1,31 +1,41 @@
 <!doctype html>
 <html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
-
+<head>
+  <title>Anime Catalog | Home</title>
+  <meta name="description" content="A catalog of my favorite anime series and movies organized by genre, rating, and year." />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
   <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+  <header class="main-header">
+      <h1 class="title">MY ANIME CATALOG</h1>
     </header>
+    <div class="controls">
+  <select id="genre-filter" onchange="filterByGenre()">
+    <option value="All">All Genres</option>
+    <option value="Action">Action</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="Thriller">Thriller</option>
+  </select>
+
+  <select id="rating-sort" onchange="sortByRating()">
+    <option value="default">Sort by Rating</option>
+    <option value="high">Highest to Lowest</option>
+    <option value="low">Lowest to Highest</option>
+  </select>
+</div>
     <div id="card-container"></div>
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+        <h2>Anime Title</h2>
+        <img src="" alt="Anime Poster" />
+        <ul class="details">
+          <li>Genre: </li>
+          <li>Rating: </li>
+          <li>Year: </li>
         </ul>
       </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
     </div>
   </body>
 </html>
